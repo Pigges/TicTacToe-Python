@@ -1,7 +1,11 @@
 import os
+import platform
 import math
 
-clear = lambda: os.system('clear')
+if (platform.system() == "Linux" or platform.system() == "Darwin") :
+    clear = lambda: os.system('clear')
+elif (platform.system() == "Windows") :
+    clear = lambda: os.system('cls')
 
 # Startup message
 clear()
